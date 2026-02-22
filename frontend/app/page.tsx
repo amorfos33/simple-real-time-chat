@@ -103,9 +103,13 @@ export default function Home() {
             <p className="joined-as">Joined as: {username}</p>
             <div className="messages">
               {messages.map((message) => (
-                <article key={message.id} className="message">
+                <article
+                  key={message.id}
+                  className={`message ${message.username === username ? 'message-own' : ''}`}
+                >
                   <p>
-                    <strong>{message.username}:</strong> {message.text}
+                    <strong>{message.username === username ? 'You' : message.username}:</strong>{' '}
+                    {message.text}
                   </p>
                 </article>
               ))}

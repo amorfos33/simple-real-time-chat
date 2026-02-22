@@ -53,6 +53,12 @@ body {
   padding: 8px 10px;
 }
 
+.message-own {
+  align-self: flex-end;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+}
+
 .form {
   display: flex;
   flex-direction: column;
